@@ -18,6 +18,15 @@ on fs && property:ro.debuggable=0
     #endif
     # set charging free due to it wait for USB activation
     start adbd
+    
+on fs
+    start init-recovery-mt6785-sh
+
+service init-recovery-mt6785-sh /init.recovery.mt6785.sh
+    user root
+    group root
+    seclabel u:r:recovery:s0
+    oneshot
 
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
