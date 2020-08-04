@@ -64,13 +64,11 @@ BOARD_SUPER_PARTITION_SIZE := 6979321856
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 6979321856
 BOARD_MAIN_PARTITION_LIST := \
-    system \
-    oppo_product
+    system
 # Non-SAR on Android 10 means the presence of stage-1 ramdisk
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := oppo_product
+TARGET_COPY_OUT_PRODUCT := system/product
 BUILD_WITHOUT_VENDOR := true
 
 # Recovery
